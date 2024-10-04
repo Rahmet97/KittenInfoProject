@@ -1,0 +1,176 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "john_doe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john@example.com",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "jane_smith",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane@example.com",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "alice_jones",
+      "first_name": "Alice",
+      "last_name": "Jones",
+      "email": "alice@example.com",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "api.breed",
+    "pk": 1,
+    "fields": {
+      "name": "Siamese"
+    }
+  },
+  {
+    "model": "api.breed",
+    "pk": 2,
+    "fields": {
+      "name": "Persian"
+    }
+  },
+  {
+    "model": "api.breed",
+    "pk": 3,
+    "fields": {
+      "name": "Bengal"
+    }
+  },
+  {
+    "model": "api.breed",
+    "pk": 4,
+    "fields": {
+      "name": "Maine Coon"
+    }
+  },
+  {
+    "model": "api.breed",
+    "pk": 5,
+    "fields": {
+      "name": "Sphynx"
+    }
+  },
+  {
+    "model": "api.kitten",
+    "pk": 1,
+    "fields": {
+      "color": "White",
+      "age": 2,
+      "description": "Playful and curious",
+      "breed": 1,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.kitten",
+    "pk": 2,
+    "fields": {
+      "color": "Black",
+      "age": 3,
+      "description": "Friendly and quiet",
+      "breed": 2,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.kitten",
+    "pk": 3,
+    "fields": {
+      "color": "Brown",
+      "age": 1,
+      "description": "Active and agile",
+      "breed": 3,
+      "user": 2
+    }
+  },
+  {
+    "model": "api.kitten",
+    "pk": 4,
+    "fields": {
+      "color": "Grey",
+      "age": 4,
+      "description": "Gentle giant",
+      "breed": 4,
+      "user": 3
+    }
+  },
+  {
+    "model": "api.kitten",
+    "pk": 5,
+    "fields": {
+      "color": "Pink",
+      "age": 2,
+      "description": "Curious and hairless",
+      "breed": 5,
+      "user": 2
+    }
+  },
+  {
+    "model": "api.rating",
+    "pk": 1,
+    "fields": {
+      "kitten": 1,
+      "user": 2,
+      "score": 5
+    }
+  },
+  {
+    "model": "api.rating",
+    "pk": 2,
+    "fields": {
+      "kitten": 2,
+      "user": 3,
+      "score": 4
+    }
+  },
+  {
+    "model": "api.rating",
+    "pk": 3,
+    "fields": {
+      "kitten": 3,
+      "user": 1,
+      "score": 5
+    }
+  },
+  {
+    "model": "api.rating",
+    "pk": 4,
+    "fields": {
+      "kitten": 4,
+      "user": 2,
+      "score": 4
+    }
+  },
+  {
+    "model": "api.rating",
+    "pk": 5,
+    "fields": {
+      "kitten": 5,
+      "user": 3,
+      "score": 3
+    }
+  }
+]

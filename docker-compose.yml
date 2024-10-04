@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:13
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    command: >
+      sh -c "/wait-for-postgres.sh db 5432 python manage.py migrate &&
+      python manage.py loaddata initial_data.json &&
+      python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+  test:
+    build: .
+    command: pytest
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+volumes:
+  postgres_data:
